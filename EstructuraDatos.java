@@ -5,7 +5,10 @@
 package javabasico;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  *
@@ -69,14 +72,57 @@ public class EstructuraDatos {
      for (int i = 0; i < nombres.size(); i++) {
     System.out.println("El dato es :"  + nombres.get(i));
     }
-        
-   
+     //REMOVE
+        nombres.remove("Maria");
+     //ENCONTRAR  UN DATO
+     nombres.contains("Luis"); //bolean
+     //indice de un dato
+     nombres.indexOf("Luis");
+     //ordenar una lista
+      Collections.sort(nombres);
+     //Revertir una lista
+      Collections.reverse(nombres);
+     //Reemplazar un Dato
+     nombres.set(1,"Yadira");
+     
+     //
+        System.out.println("---------------------");
+     for(String item:nombres){
+         System.out.println("El dato es:" + item);
+          System.out.println("---------------------");
+     }
+     
+     //limpiar toda la lista
+    //nombres.clear();
+    
+     
     }
     
-    
     public void map (){
-        
+        Map<String,Integer > edades =  new HashMap<>();
+        // agregar datos put
+        edades.put("Gael",53);
+        edades.put("Luciana",55);
+        edades.put("Carlos",30);
+        edades.put("Paul",30);
+//REMOVE DATOS 
+    edades.remove("Paul");
+//cantidad de datos 
+  edades.size();
+  
+ //For
+ for (String nombre : edades.keySet()) {
+            int edad = edades.get(nombre);
+            String estado;
+                        if (edad >= 18) {
+                estado = "Mayor de edad";
+            } else {
+                estado = "Menor de edad";
+            }
+            
+            System.out.println("Clave: " + nombre + ", Valor: " + edad + " - " + estado);
+        }
+    }
+ 
 }
     
-    
-}

@@ -57,7 +57,8 @@ public class JavaBasico {
         case 5:
              EstructuraDatos o5= new EstructuraDatos();
              //o5.array();
-             o5.list();
+             //o5.list();
+             o5.map();
 
              break;
         
